@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calorie Calculator</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Calculate Your Daily Calorie Needs</h2>
+            <form id="calorieForm">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="result"></div>
+        </section>
+        <section>
+            <h2>Input Table</h2>
+            <table id="inputTable">
+                <thead>
+                    <tr>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Height (cm)</th>
+                        <th>Weight (kg)</th>
+                        <th>BMR (cal/day)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>How to Calculate BMR</h2>
+            <div id="bmrExplanation">
+                <p>BMR (Basal Metabolic Rate) is the number of calories your body needs to perform basic life-sustaining functions, such as breathing, circulation, and cell production, while at rest. The formula to calculate BMR is different for men and women:</p>
+                <p><strong>For Men:</strong></p>
+                <p><strong>BMR = 88.362 + (13.397 * weight in kg) + (4.799 * height in cm) - (5.677 * age in years)</strong></p>
+                <p><strong>For Women:</strong></p>
+                <p><strong>BMR = 447.593 + (9.247 * weight in kg) + (3.098 * height in cm) - (4.330 * age in years)</strong></p>
+                <p>For example, if a man weighs 70 kg, is 175 cm tall, and is 25 years old, his BMR would be calculated as follows:</p>
+                <p><strong>BMR = 88.362 + (13.397 * 70) + (4.799 * 175) - (5.677 * 25) = 1,679.65 calories/day</strong></p>
+                <p>Similarly, if a woman weighs 60 kg, is 165 cm tall, and is 30 years old, her BMR would be calculated as follows:</p>
+                <p><strong>BMR = 447.593 + (9.247 * 60) + (3.098 * 165) - (4.330 * 30) = 1,383.38 calories/day</strong></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Ayush and Gaurav - btech college project- Calorie Calculator</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
